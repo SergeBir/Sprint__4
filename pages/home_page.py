@@ -46,11 +46,18 @@ class MainHomePage(BasePage):
     EIGHTLINETEXT = [By.XPATH, "//div[@id='accordion__panel-7']//p"]
     #локатор Cookie
     ACCEPTCOOKIE = [By.XPATH, '//button[@class="App_CookieButton__3cvqF"]']
+    #локатор логотипа Яндекс
+    YANDEXLOGO = [By.XPATH, './/img[@alt="Yandex"]']
+    #локатор текста Дзен
+    DZEN = [By.XPATH, './/span[@aria-label="Логотип Дзен"]']
+    #локатор картинки Скутера
+    PICTURE = [By.XPATH, './/img[@alt="Scooter blueprint"]']
 
     #метод нажатия на всплывающее окно про куки
     def cookies_accept(self):
-        button = self.find_element(MainHomePage.ACCEPTCOOKIE)
-        self.driver.execute_script("arguments[0].click();", button)
+        button = self.find_element(MainHomePage.ACCEPTCOOKIE, time=10)
+        button.click()
+
 
     #метод нажатия на верхнюю кнопку "Заказать"
     def upper_order_click(self):
@@ -70,36 +77,46 @@ class MainHomePage(BasePage):
 
     #метод нажатия на первую строку
     def one_line_click(self):
-        self.find_element(MainHomePage.ONELINE,time=5).click()
+        self.find_element(MainHomePage.ONELINE,time=10).click()
 
     #метод нажатия на вторую строку
     def two_line_click(self):
-        self.find_element(MainHomePage.TWOLINE,time=5).click()
+        self.find_element(MainHomePage.TWOLINE,time=10).click()
 
     # метод нажатия на третью строку
     def three_line_click(self):
-        self.find_element(MainHomePage.THREELINE,time=5).click()
+        self.find_element(MainHomePage.THREELINE,time=10).click()
 
     # метод нажатия на четвертую строку
     def four_line_click(self):
-        self.find_element(MainHomePage.FOURLINE,time=5).click()
+        self.find_element(MainHomePage.FOURLINE,time=10).click()
 
     # метод нажатия на пятую строку
     def five_line_click(self):
-        self.find_element(MainHomePage.FIVELINE,time=5).click()
+        self.find_element(MainHomePage.FIVELINE,time=10).click()
 
     # метод нажатия на шестую строку
     def six_line_click(self):
-        self.find_element(MainHomePage.SIXLINE,time=5).click()
+        self.find_element(MainHomePage.SIXLINE,time=10).click()
 
     # метод нажатия на седьмую строку
     def seven_line_click(self):
-        self.find_element(MainHomePage.SEVENLINE,time=5).click()
+        self.find_element(MainHomePage.SEVENLINE,time=10).click()
 
     # метод нажатия на восьмую строку
     def eight_line_click(self):
-        self.find_element(MainHomePage.EIGHTLINE,time=5).click()
+        self.find_element(MainHomePage.EIGHTLINE,time=10).click()
 
     #метод прокрутки страницы до раздела "Вопросы о важном"
     def scroll_to_down(self):
         self.scroll_to_element(MainHomePage.IMPORTANT)
+
+    # метод нажатия на логотип Яндекс и проверка открывшейся вкладки
+    def yandex_logo_click(self):
+        logo = self.find_element(MainHomePage.YANDEXLOGO,time=10)
+        logo.click()
+
+    #метод нахождения текста Дзен
+    def dzen_text_find(self):
+        dzen = self.find_element(MainHomePage.DZEN,time=10)
+        return dzen

@@ -19,6 +19,8 @@ class OrderFirstPage(BasePage):
     NEXT = [By.XPATH, "//button[text()='Далее']"]
     #локатор значения в выпадающем списке
     CHOICE = [By.CLASS_NAME, "select-search__row"]
+    #локатор кнопки-надписи "Самокат"
+    LOGO = [By.XPATH, "//img[@alt='Scooter']"]
 
     #метод  передачи данных в первую строку
     def first_line_send_data(self, firstname):
@@ -58,6 +60,11 @@ class OrderFirstPage(BasePage):
     def button_next_click(self):
         button = self.find_element(OrderFirstPage.NEXT)
         button.click()
+
+    #метод нажатия на логотип "Самокат"
+    def logo_click(self):
+        logo = self.find_element(OrderFirstPage.LOGO)
+        logo.click()
 
     # метод выбора в списке, передача номера телефона и перехода на вторую вкладку
     def moving_to_second_page(self, phone_number):

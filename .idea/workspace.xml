@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="041e9cf6-4d53-45cb-9eb5-db6d9268ec7e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/geckodriver" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/first_page_of_order.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/first_page_of_order.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/home_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/second_page_of_order.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/second_page_of_order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_check_lines.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_check_lines.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_make_order.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_make_order.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,8 +39,8 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_make_order.test_make_order_through_lower_button_true">
-    <configuration name="Python tests for test_check_lines.test_check_text_first_line_is_correct" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.Python tests for test_make_order.test_check_moving_to_yandex_website_after_click_text_true">
+    <configuration name="Python tests for test_check_lines.test_check_text_eighth_line_is_correct" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Sprint__4" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -50,11 +50,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_check_lines.test_check_text_first_line_is_correct&quot;" />
+      <option name="_new_target" value="&quot;test_check_lines.test_check_text_eighth_line_is_correct&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_check_lines.test_check_text_second_line_is_correct" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_check_lines.test_check_text_seventh_line_is_correct" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Sprint__4" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -64,11 +64,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_check_lines.test_check_text_second_line_is_correct&quot;" />
+      <option name="_new_target" value="&quot;test_check_lines.test_check_text_seventh_line_is_correct&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_make_order.test_make_order_through_lower_button_true" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_make_order.test_check_moving_to_yandex_website_after_click_text_true" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Sprint__4" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -78,21 +78,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_make_order.test_make_order_through_lower_button_true&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_make_order.test_make_order_through_upper_button_true" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="Sprint__4" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_make_order.test_make_order_through_upper_button_true&quot;" />
+      <option name="_new_target" value="&quot;test_make_order.test_check_moving_to_yandex_website_after_click_text_true&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -110,13 +96,27 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests in test_make_order.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Sprint__4" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_make_order.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_make_order.test_make_order_through_lower_button_true" />
-        <item itemvalue="Python tests.Python tests for test_make_order.test_make_order_through_upper_button_true" />
-        <item itemvalue="Python tests.Python tests for test_check_lines.test_check_text_second_line_is_correct" />
-        <item itemvalue="Python tests.Python tests for test_check_lines.test_check_text_first_line_is_correct" />
+        <item itemvalue="Python tests.Python tests for test_make_order.test_check_moving_to_yandex_website_after_click_text_true" />
+        <item itemvalue="Python tests.Python tests in test_make_order.py" />
         <item itemvalue="Python tests.Python tests in test_check_lines.py" />
+        <item itemvalue="Python tests.Python tests for test_check_lines.test_check_text_eighth_line_is_correct" />
+        <item itemvalue="Python tests.Python tests for test_check_lines.test_check_text_seventh_line_is_correct" />
       </list>
     </recent_temporary>
   </component>

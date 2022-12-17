@@ -76,10 +76,8 @@ class OrderSecondPage(BasePage):
         return order_accept
 
     # метод заполнения всех элементов
-    def choice_all_rest_elements(self, comment):
+    def all_rest_elements_choice(self, comment):
         self.checkbox_click()
         self.time_line_click()
         self.time_of_reserved_choice()
         self.comment_line_send_data(comment)
-
-
