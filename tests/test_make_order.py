@@ -1,3 +1,4 @@
+import allure
 from pages.home_page import MainHomePage
 from pages.first_page_of_order import OrderFirstPage
 from pages.second_page_of_order import OrderSecondPage
@@ -5,7 +6,8 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
 
-# проверка заказа через верхнюю кнопку
+@allure.title('Проверяем, что заказ через верхнюю кнопку осуществляется корректно')
+@allure.description('проверка заказа через верхнюю кнопку')
 def test_make_order_through_upper_button_true(browser):
     home = MainHomePage(browser)
     order = OrderFirstPage(browser)
@@ -28,7 +30,8 @@ def test_make_order_through_upper_button_true(browser):
     assert "Заказ оформлен" in message.text
 
 
-# проверка заказа через нижнюю кнопку
+@allure.title('Проверяем, что заказ через нижнюю кнопку осуществляется корректно')
+@allure.description('проверка заказа через нижнюю кнопку')
 def test_make_order_through_lower_button_true(browser):
     home = MainHomePage(browser)
     order = OrderFirstPage(browser)
@@ -51,7 +54,8 @@ def test_make_order_through_lower_button_true(browser):
     assert "Заказ оформлен" in message.text
 
 
-#проверка возврата на главную страницу после нажатия на "Самокат"
+@allure.title('Проверяем, что при нажатии на текст "Самокат" происходит возврат на главную страницу')
+@allure.description('проверка возврата на главную страницу после нажатия на "Самокат"')
 def test_check_comeback_to_main_page_after_click_logo_true(browser):
     home = MainHomePage(browser)
     order = OrderFirstPage(browser)
@@ -66,7 +70,9 @@ def test_check_comeback_to_main_page_after_click_logo_true(browser):
     assert browser.current_url == "https://qa-scooter.praktikum-services.ru/"
 
 
-#проверка, что после нажатия на логотип "Яндекс" откроется главная страница поисковика в соседней вкладке
+@allure.title('Проверяем, что при нажатии на Яндекс, открывается главная страница Дзена')
+@allure.description('проверка, что после нажатия на логотип "Яндекс" '
+                    'откроется главная страница поисковика в соседней вкладке')
 def test_check_moving_to_yandex_website_after_click_text_true(browser):
     home = MainHomePage(browser)
     home.go_to_site()

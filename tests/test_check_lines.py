@@ -1,9 +1,11 @@
+import allure
 from pages.home_page import MainHomePage
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
 
-#проверка первой строки на главной странице
+@allure.title('Проверяем, что текст первой строки на главной странице отображается корректно')
+@allure.description('проверка первой строки на главной странице')
 def test_check_text_first_line_is_correct(browser):
     main = MainHomePage(browser)
     main.go_to_site()
@@ -20,7 +22,8 @@ def test_check_text_first_line_is_correct(browser):
     assert message_text.text == "Сутки — 400 рублей. Оплата курьеру — наличными или картой."
 
 
-#проверка второй строки на главной странице
+@allure.title('Проверяем, что текст второй строки на главной странице отображается корректно')
+@allure.description('проверка второй строки на главной странице')
 def test_check_text_second_line_is_correct(browser):
     main = MainHomePage(browser)
     main.go_to_site()
@@ -39,7 +42,8 @@ def test_check_text_second_line_is_correct(browser):
                                   "можете просто сделать несколько заказов — один за другим."
 
 
- #проверка третьей строки на главной странице
+@allure.title('Проверяем, что текст третьей строки на главной странице отображается корректно')
+@allure.description('проверка третьей строки на главной странице')
 def test_check_text_third_line_is_correct(browser):
     main = MainHomePage(browser)
     main.go_to_site()
@@ -58,7 +62,8 @@ def test_check_text_third_line_is_correct(browser):
                                 "Если мы привезли самокат 8 мая в 20:30, суточная аренда закончится 9 мая в 20:30."
 
 
-#проверка четвертой строки на главной странице
+@allure.title('Проверяем, что текст четвертой строки на главной странице отображается корректно')
+@allure.description('проверка четвертой строки на главной странице')
 def test_check_text_fourth_line_is_correct(browser):
     main = MainHomePage(browser)
     main.go_to_site()
@@ -75,7 +80,8 @@ def test_check_text_fourth_line_is_correct(browser):
     assert message_text.text == "Только начиная с завтрашнего дня. Но скоро станем расторопнее."
 
 
-#проверка пятой строки на главной странице
+@allure.title('Проверяем, что текст пятой строки на главной странице отображается корректно')
+@allure.description('проверка пятой строки на главной странице')
 def test_check_text_fifth_line_is_correct(browser):
     main = MainHomePage(browser)
     main.go_to_site()
@@ -93,7 +99,8 @@ def test_check_text_fifth_line_is_correct(browser):
                                 " — всегда можно позвонить в поддержку по красивому номеру 1010."
 
 
-#проверка шестой строки на главной странице
+@allure.title('Проверяем, что текст шестой строки на главной странице отображается корректно')
+@allure.description('проверка шестой строки на главной странице')
 def test_check_text_sixth_line_is_correct(browser):
     main = MainHomePage(browser)
     main.go_to_site()
@@ -112,7 +119,8 @@ def test_check_text_sixth_line_is_correct(browser):
                                 "Зарядка не понадобится."
 
 
-#проверка седьмой строки на главной странице
+@allure.title('Проверяем, что текст седьмой строки на главной странице отображается корректно')
+@allure.description('проверка седьмой строки на главной странице')
 def test_check_text_seventh_line_is_correct(browser):
     main = MainHomePage(browser)
     main.go_to_site()
@@ -130,7 +138,8 @@ def test_check_text_seventh_line_is_correct(browser):
                                 "Штрафа не будет, объяснительной записки тоже не попросим. Все же свои."
 
 
-#проверка восьмой строки на главной странице
+@allure.title('Проверяем, что текст восьмой строки на главной странице отображается корректно')
+@allure.description('проверка восьмой строки на главной странице')
 def test_check_text_eighth_line_is_correct(browser):
     main = MainHomePage(browser)
     main.go_to_site()
