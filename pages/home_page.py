@@ -54,8 +54,13 @@ class MainHomePage(BasePage):
 
     #метод нажатия на верхнюю кнопку "Заказать"
     def upper_order_click(self):
-        upper_button = self.find_element(MainHomePage.UPPERORDER)
+        upper_button = self.find_element(MainHomePage.UPPERORDER,time=5)
         upper_button.click()
+
+    # метод нажатия на нижнюю кнопку "Заказать"
+    def lower_order_click(self):
+        lower_button = self.find_element(MainHomePage.LOWERORDER, time=5)
+        lower_button.click()
 
     #метод на нахождение текста
     def get_line_text(self, locator):
@@ -65,35 +70,35 @@ class MainHomePage(BasePage):
 
     #метод нажатия на первую строку
     def one_line_click(self):
-        self.find_element(MainHomePage.ONELINE).click()
+        self.find_element(MainHomePage.ONELINE,time=5).click()
 
     #метод нажатия на вторую строку
     def two_line_click(self):
-        self.find_element(MainHomePage.TWOLINE).click()
+        self.find_element(MainHomePage.TWOLINE,time=5).click()
 
     # метод нажатия на третью строку
     def three_line_click(self):
-        self.find_element(MainHomePage.THREELINE).click()
+        self.find_element(MainHomePage.THREELINE,time=5).click()
 
     # метод нажатия на четвертую строку
     def four_line_click(self):
-        self.find_element(MainHomePage.FOURLINE).click()
+        self.find_element(MainHomePage.FOURLINE,time=5).click()
 
     # метод нажатия на пятую строку
     def five_line_click(self):
-        self.find_element(MainHomePage.FIVELINE).click()
+        self.find_element(MainHomePage.FIVELINE,time=5).click()
 
     # метод нажатия на шестую строку
     def six_line_click(self):
-        self.find_element(MainHomePage.SIXLINE).click()
+        self.find_element(MainHomePage.SIXLINE,time=5).click()
 
     # метод нажатия на седьмую строку
     def seven_line_click(self):
-        self.find_element(MainHomePage.SEVENLINE).click()
+        self.find_element(MainHomePage.SEVENLINE,time=5).click()
 
     # метод нажатия на восьмую строку
     def eight_line_click(self):
-        self.find_element(MainHomePage.EIGHTLINE).click()
+        self.find_element(MainHomePage.EIGHTLINE,time=5).click()
 
     #метод прокрутки страницы до раздела "Вопросы о важном"
     def scroll_to_down(self):

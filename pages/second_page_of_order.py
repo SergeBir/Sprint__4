@@ -25,8 +25,8 @@ class OrderSecondPage(BasePage):
     DAYELEMENT = [By.XPATH, "//div[@role='button' and text()='17']"]
     # локатор кнопки подтверждения.
     BUTTONCONFIRM = [By.XPATH, "//button[text()='Да']"]
-    # локатор строки "Оформить заказ".
-    ORDERTEXT = [By.XPATH, "//div[@class='Order_ModalHeader__3FDaJ']"]
+    # локатор строки "Успешного заказа".
+    ORDERTEXT = [By.XPATH, '//div[@class="Order_ModalHeader__3FDaJ"]']
 
     # метод нажатия на первую строку с выбором даты.
     def first_line_click_with_choice(self):
@@ -70,10 +70,10 @@ class OrderSecondPage(BasePage):
         confirm_button = self.find_element(OrderSecondPage.BUTTONCONFIRM)
         self.click_element(confirm_button)
 
-    #метод нахождения кнопки подтверждения после нажатия
+    #метод нахождения текста подтверждения после нажатия
     def search_text_after_confirm(self):
-        button = self.find_element(OrderSecondPage.ORDERTEXT)
-        return button
+        order_accept = self.find_element(OrderSecondPage.ORDERTEXT)
+        return order_accept
 
     # метод заполнения всех элементов
     def choice_all_rest_elements(self, comment):
