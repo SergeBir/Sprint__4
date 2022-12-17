@@ -28,49 +28,51 @@ class OrderSecondPage(BasePage):
     # локатор строки "Оформить заказ".
     ORDERTEXT = [By.XPATH, "//div[@class='Order_ModalHeader__3FDaJ']"]
 
-    # метод нажатия на первую строку с выбором даты
+    # метод нажатия на первую строку с выбором даты.
     def first_line_click_with_choice(self):
         day = self.find_element(OrderSecondPage.DAYORDER)
         self.click_element(day)
 
-    # методы передачи данных в строку даты
+    # методы передачи данных в строку даты.
     def first_line_send_data(self, data):
         day = self.find_element(OrderSecondPage.DAYORDER)
         day.send_keys(data)
         element = self.find_element(OrderSecondPage.DAYELEMENT)
         self.click_element(element)
 
-    # метод нажатия на строку времени
+    # метод нажатия на строку времени.
     def time_line_click(self):
         time_line = self.find_element(OrderSecondPage.TIMELINE)
         time_line.click()
 
-    # метод выбора строки из списка срока аренды
+    # метод выбора строки из списка срока аренды.
     def time_of_reserved_choice(self):
         reserved = self.find_element(OrderSecondPage.TIMEOFRESERVED)
         reserved.click()
 
-    # метод выбора чекбокса
+    # метод выбора чекбокса.
     def checkbox_click(self):
         checkbox = self.find_element(OrderSecondPage.COLOR)
         self.click_element(checkbox)
 
-    # методы передачи текста в строку комментария
+    # методы передачи текста в строку комментария.
     def comment_line_send_data(self, data):
         comment = self.find_element(OrderSecondPage.COMMENT)
         comment.send_keys(data)
 
-    # метод нажатия на кнопку "Заказать"
+    # метод нажатия на кнопку "Заказать".
     def button_order_click(self):
         button = self.find_element(OrderSecondPage.LOWERORDER)
         self.click_element(button)
 
-    # метод нажатия на кнопку подтверждения
+    # метод нажатия на кнопку подтверждения.
     def confirm_button_click(self):
         confirm_button = self.find_element(OrderSecondPage.BUTTONCONFIRM)
         self.click_element(confirm_button)
 
-    # метод проверки, что после подтверждения заказа ничего не изменяется( так как тут ошибка)
-    def order_text_check(self):
-        order_text = self.find_element(OrderSecondPage.ORDERTEXT)
-        return order_text
+    #метод нахождения кнопки подтверждения после нажатия
+    def search_text_after_confirm(self):
+        button = self.find_element(OrderSecondPage.ORDERTEXT)
+        return button
+
+

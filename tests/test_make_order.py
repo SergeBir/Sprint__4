@@ -33,4 +33,5 @@ def test_make_order_through_upper_button_true(browser):
     second_page.comment_line_send_data("Пишу свой первый автотест!")
     second_page.button_order_click()
     second_page.confirm_button_click()
-    assert browser.current_url != "https://qa-scooter.praktikum-services.ru/order"
+    order_text = OrderSecondPage.search_text_after_confirm(second_page)
+    assert order_text.is_displayed()
