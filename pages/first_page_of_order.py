@@ -21,21 +21,28 @@ class OrderFirstPage(BasePage):
     CHOICE = [By.CLASS_NAME, "select-search__row"]
 
     #метод  передачи данных в первую строку
-    def first_line_send_data(self, data):
+    def first_line_send_data(self, firstname):
         name = self.find_element(OrderFirstPage.NAMELINE, time=10)
-        name.send_keys(data)
+        name.send_keys(firstname)
 
     # метод  передачи данных во вторую строку
-    def second_line_send_data(self, data):
+    def second_line_send_data(self, surname):
         lastname = self.find_element(OrderFirstPage.LASTNAMELINE, time=10)
-        lastname.send_keys(data)
+        lastname.send_keys(surname)
 
     # метод  передачи данных в третью строку
-    def third_line_send_data(self, data):
+    def third_line_send_data(self, place):
         adress = self.find_element(OrderFirstPage.ADRESSLINE, time=10)
-        adress.send_keys(data)
+        adress.send_keys(place)
 
-    #метод нажатия на выпадающий список
+    # метод заполнения всех строк клиента
+    def all_lines_send_data(self,name, lastname, adress):
+        self.first_line_send_data(name)
+        self.second_line_send_data(lastname)
+        self.third_line_send_data(adress)
+
+
+    # метод нажатия на выпадающий список
     def line_station_click(self):
         station = self.find_element(OrderFirstPage.SUBWAYSTATION)
         station.click()
@@ -51,4 +58,11 @@ class OrderFirstPage(BasePage):
     def button_next_click(self):
         button = self.find_element(OrderFirstPage.NEXT)
         button.click()
+
+    # метод выбора в списке, передача номера телефона и перехода на вторую вкладку
+    def moving_to_second_page(self, phone_number):
+        self.line_station_click()
+        self.phone_number_line_send_data(phone_number)
+        self.button_next_click()
+
 

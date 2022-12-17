@@ -75,4 +75,11 @@ class OrderSecondPage(BasePage):
         button = self.find_element(OrderSecondPage.ORDERTEXT)
         return button
 
+    # метод заполнения всех элементов
+    def choice_all_rest_elements(self, comment):
+        self.checkbox_click()
+        self.time_line_click()
+        self.time_of_reserved_choice()
+        self.comment_line_send_data(comment)
+
 
